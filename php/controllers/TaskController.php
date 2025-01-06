@@ -26,3 +26,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     file_put_contents('../../data/tasks.json', json_encode($tasks, JSON_PRETTY_PRINT));
 }
+
+//$tasks = file_get_contents('./data/tasks.json');
+$tasks = json_decode(file_get_contents('./data/tasks.json'), true);

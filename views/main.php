@@ -30,6 +30,14 @@
     </p>
 </form>
 
+<ul>
+<?php foreach ($tasks as $taskGroup): ?>
+    <?php foreach ($taskGroup as $task): ?>
+    <li><?= $task['Name']?> </li>
+    <?php endforeach; ?>
+<?php endforeach; ?>
+</ul>
+
 
 </body>
 </html>
