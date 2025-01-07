@@ -30,13 +30,16 @@
     </p>
 </form>
 
-<ul>
+
 <?php foreach ($tasks as $taskGroup): ?>
-    <?php foreach ($taskGroup as $task): ?>
-    <li><?= $task['Name']?> </li>
-    <?php endforeach; ?>
+    <ul>
+        <?php foreach ($taskGroup as $task): ?>
+            <li><?= "<b>Task Name:</b> {$task['Name']}"?> </li>
+            <li><?= "<b>Description:</b> {$task['Description']}"?> </li>
+            <li><?= "<b>Priority:</b> {$task['Priority']}"?> </li>
+        <?php endforeach; ?>
+    </ul>
 <?php endforeach; ?>
-</ul>
 
 
 </body>
