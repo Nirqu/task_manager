@@ -1,5 +1,5 @@
 <?php
-define('ROOT_PATH', __DIR__ . '/../../');
+require 'get_task_list.php';
 echo getcwd();
 //
 //echo '<pre>';
