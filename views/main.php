@@ -8,18 +8,17 @@
 </head>
 <body>
 <h1>Welcome to Task Manager</h1>
-
-
 <form action="../php/controllers/TaskController.php" method="POST">
     <p>
         <label for="name">Task name</label>
-        <input type="text" id="name" name="name"/>
+        <input type="text" id="name" name="name" required/>
     </p>
     <label for="description"></label>
-    <textarea rows="5" cols="33" id="description" name="description" placeholder="Task description here..."></textarea>
+    <textarea rows="5" cols="33" id="description" name="description" placeholder="Task description here..." required></textarea>
     <p>
         <label for="prior">Priority</label>
-        <select name="priority" id="prior">
+        <select name="priority" id="prior" required>
+            <option valid="" disabled selected>Select Priority</option>
             <option value="high">High</option>
             <option value="medium">Medium</option>
             <option value="low">Low</option>
@@ -29,8 +28,6 @@
         <input type="submit"/>
     </p>
 </form>
-
-
 <?php foreach ($tasks as $taskGroup): ?>
     <ul>
         <?php foreach ($taskGroup as $task): ?>
