@@ -6,8 +6,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     foreach ($tasks as $task) {
         foreach ($task as $task_field) {
             if ($task_field['Name'] === $_POST['name']);{
-                echo 'Error';
-                die('Memeland');
+                header('Location: /index.php?error=duplicate');
+                exit;
             }
         }
     }
